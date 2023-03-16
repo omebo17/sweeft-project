@@ -1,0 +1,22 @@
+<aside class="profile-card">
+    <header>  
+        <a href="" style="pointer-events: none;">
+        <img [src]="picture">
+    </a>
+    <h1>
+        {{name + " " + surename}}
+    </h1>
+    </header>
+    <div class="profile-bio">
+      <p>
+        {{status}}
+      </p>
+    </div>
+    <div class="profile-friends">
+        <h2 style="padding-left: 20px;">Friends</h2>
+        <div class="friend-list" #roll>
+          <p style="padding-left: 10px; font-size: large;" *ngFor="let friend of friends">{{ friend }}</p>
+        </div>
+    </div>
+</aside>
+<button [routerLink]="['']" class="back-button">⇦ back</button>
